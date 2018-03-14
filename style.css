@@ -1,0 +1,8 @@
+body, label, input, button, select { 
+  font-family: 'Lato', Lato;
+  font-weight: 200;
+}
+
+.leaflet-container {
+  background-color: lightblue !important;
+}
