@@ -1,5 +1,5 @@
 #Set working directory so that all files remain together etc
-setwd("C:/Users/james.hardiman/Desktop/R/PayByConstituency")
+setwd("C:/Users/**********")
 
 #You might need most of these... It's best to load them just in case.
 library(maptools)
