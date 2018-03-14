@@ -33,6 +33,10 @@ calcs <- read_excel("regionalgvaperhead.xls", sheet = "Sheet1")
 #merge variables from excel imported data to spatial dataframe. Matched by "CODE".
 ukregions <- merge(ukregions, calcs, by.x = "CODE", by.y = "Code")
 
+#Simplify map to reduce memory use
+gc()
+ukregions <- rmapshaper::ms_simplify(ukregions)
+
 #create colour palette for continuous colour variation (adjust number to how many intervals you want)
 pal <- colorBin("Greens", uk$PovertyNumberActual, 9, pretty = TRUE)
 
