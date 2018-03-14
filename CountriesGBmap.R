@@ -1,5 +1,5 @@
 #Set working directory so that all files remain together etc
-setwd("C:/Users/james.hardiman/Desktop/R/PayByConstituency")
+setwd("C:/Users/**********")
 
 #You might need most of these... It's best to load them just in case.
 library(maptools)
@@ -73,9 +73,9 @@ server <- function(input, output, session) {
                   opacity = 1.0, fillOpacity = 1.0,
                   highlightOptions = highlightOptions(color = "white", weight = 2,
                                                       bringToFront = TRUE),
-                  popup = paste("Country:", ukcountries$ctry16nm, "<br>", "GVA per head:", "£", prettyNum(ukcountries$GVAperhead, big.mark=",", scientific=FALSE), "<br>")) %>%
+                  popup = paste("Country:", ukcountries$ctry16nm, "<br>", "GVA per head:", "Â£", prettyNum(ukcountries$GVAperhead, big.mark=",", scientific=FALSE), "<br>")) %>%
       addLegend("bottomright", pal = pal, values = ukcountries$GVAperhead,
-                title = "GVA per head (£)",
+                title = "GVA per head (Â£)",
                 opacity = 1)
   })
   
