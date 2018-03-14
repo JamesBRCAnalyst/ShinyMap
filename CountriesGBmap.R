@@ -46,7 +46,7 @@ countrycalcs <- read_excel("regionalgvaperhead.xls", sheet = "Sheet2")
 #merge variables from excel imported data to spatial dataframe. Matched by "CODE".
 ukcountries <- merge(ukcountries, countrycalcs, by.x = "ctry16nm", by.y = "ctry16nm")
 
-#Simplify map to reduce memory use ... WARNING: THIS DOESN'T WORK ON MY LAPTOP ... Good Luck!!!
+#Simplify map to reduce memory use
 gc()
 ukcountries <- rmapshaper::ms_simplify(ukcountries)
 
